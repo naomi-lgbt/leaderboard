@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/naomi-lgbt/leaderboard#readme",
   "dependencies": {
+    "@tryghost/admin-api": "1.13.7",
+    "@tryghost/content-api": "1.11.13",
     "dotenv": "16.3.1",
     "winston": "3.9.0"
   },
@@ -30,6 +32,7 @@
     "@types/chai": "4.3.5",
     "@types/mocha": "10.0.1",
     "@types/node": "18.16.18",
+    "@types/tryghost__content-api": "1.3.11",
     "chai": "4.3.7",
     "eslint": "8.43.0",
     "mocha": "10.2.0",
