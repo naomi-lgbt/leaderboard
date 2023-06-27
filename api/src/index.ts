@@ -1,17 +1,12 @@
-import { logHandler } from "./utils/logHandler";
+import { aggregateData } from "./data/aggregateData";
+import { Cache } from "./interfaces/Cache";
+import { serve } from "./server/serve";
+import { validateEnv } from "./utils/validateEnv";
 
-/**
- * The linter will expect JSDoc declarations for all exported functions.
- *
- * @param {string} name Variables should be typed, and full sentences are expected.
- * @returns {string} The return type should be specified.
- */
-const main = (name: string): string => {
-  const string = `Hello ${name}!`;
-  logHandler.log("info", string);
-  return string;
-};
+(async () => {
+  const cache = { env: validateEnv(), data: {}, public: [] } as Cache;
 
-main("Naomi");
+  await aggregateData(cache);
 
-export default main;
+  await serve(cache);
+})();
