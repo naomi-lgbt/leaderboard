@@ -23,6 +23,7 @@
     "@tryghost/admin-api": "1.13.7",
     "@tryghost/content-api": "1.11.13",
     "dotenv": "16.3.1",
+    "fastify": "4.18.0",
     "winston": "3.9.0"
   },
   "devDependencies": {
