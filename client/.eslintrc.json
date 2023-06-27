@@ -1,0 +1,6 @@
+{
+  "extends": ["next/core-web-vitals", "@nhcarrigan/eslint-config"],
+  "rules": {
+    "jsdoc/require-jsdoc": "off"
+  }
+}
