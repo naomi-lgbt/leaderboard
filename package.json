@@ -3,14 +3,17 @@
   "version": "0.0.0",
   "description": "Prototyping a contributor leaderboard.",
   "scripts": {
-    "build": "tsc",
-    "lint": "eslint src test --max-warnings 0",
+    "build": "pnpm run build:api",
+    "build:api": "cd api && npm run build",
+    "lint": "pnpm run lint:api",
+    "lint:api": "cd api && pnpm run lint",
     "start": "node -r dotenv/config prod/index.js",
-    "test": "ts-mocha -u tdd  test/**/*.spec.ts --recursive --exit --timeout 10000"
+    "test": "pnpm run test:api",
+    "test:api": "cd api && pnpm run test"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/naomi-lgbt/nodejs-typescript-template.git"
+    "url": "git+ssh://git@github.com:naomi-lgbt/leaderboard.git"
   },
   "engines": {
     "node": "18.16.1",
@@ -25,25 +28,7 @@
   "author": "Naomi Carrigan",
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/naomi-lgbt/nodejs-typescript-template/issues"
+    "url": "https://github.com/naomi-lgbt/leaderboard/issues"
   },
-  "homepage": "https://github.com/naomi-lgbt/nodejs-typescript-template#readme",
-  "dependencies": {
-    "dotenv": "16.3.1",
-    "winston": "3.9.0"
-  },
-  "devDependencies": {
-    "@nhcarrigan/eslint-config": "1.1.3",
-    "@nhcarrigan/prettier-config": "1.0.1",
-    "@nhcarrigan/typescript-config": "1.0.1",
-    "@types/chai": "4.3.5",
-    "@types/mocha": "10.0.1",
-    "@types/node": "18.16.18",
-    "chai": "4.3.7",
-    "eslint": "8.43.0",
-    "mocha": "10.2.0",
-    "prettier": "2.8.8",
-    "ts-mocha": "10.0.0",
-    "typescript": "5.1.3"
-  }
+  "homepage": "https://github.com/naomi-lgbt/leaderboard#readme"
 }

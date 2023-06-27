@@ -1,2 +1,3 @@
-# Global
 /node_modules/
+/prod/
+.env
