@@ -1,3 +1,6 @@
 {
-  "extends": "@nhcarrigan"
+  "extends": "@nhcarrigan",
+  "rules": {
+    "camelcase": ["warn", { "allow": ["per_page", "issue_number"] }]
+  }
 }
