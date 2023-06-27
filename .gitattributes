@@ -6,3 +6,4 @@
 # Ignore binary files >:(
 *.png binary
 *.jpg binary
+*.ico binary
