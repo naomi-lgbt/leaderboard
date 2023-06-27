@@ -1,4 +1,4 @@
-import { RestEndpointMethodTypes } from "@octokit/rest";
+import { Octokit, RestEndpointMethodTypes } from "@octokit/rest";
 import { DateTime } from "luxon";
 
 import { Cache } from "../../interfaces/Cache";
@@ -11,15 +11,19 @@ import { initialiseDataRecord } from "../../modules/initialiseDataRecord";
  * @param {Cache} cache The cache object.
  * @param {RestEndpointMethodTypes["pulls"]["list"]["response"]["data"]} pulls The pull data from Github.
  */
-export const parseGithubPulls = (
+export const parseGithubPulls = async (
   cache: Cache,
   pulls: RestEndpointMethodTypes["pulls"]["list"]["response"]["data"]
 ) => {
+  const github = new Octokit({ auth: cache.env.githubToken });
   for (const pull of pulls) {
     if (!pull.user) {
       continue;
     }
-    const key = pull.user.email || pull.user.login;
+    const emails = await github.users.getByUsername({
+      username: pull.user.login,
+    });
+    const key = emails.data.email || pull.user.email || pull.user.login;
     if (!cache.data[key]) {
       cache.data[key] = initialiseDataRecord();
       cache.data[key].github.username = pull.user.name || pull.user.login;
@@ -45,15 +49,19 @@ export const parseGithubPulls = (
  * @param {Cache} cache The cache object.
  * @param {RestEndpointMethodTypes["issues"]["list"]["response"]["data"]} issues The issue data from Github.
  */
-export const parseGithubIssues = (
+export const parseGithubIssues = async (
   cache: Cache,
   issues: RestEndpointMethodTypes["issues"]["list"]["response"]["data"]
 ) => {
+  const github = new Octokit({ auth: cache.env.githubToken });
   for (const issue of issues) {
     if (!issue.user) {
       continue;
     }
-    const key = issue.user.email || issue.user.login;
+    const emails = await github.users.getByUsername({
+      username: issue.user.login,
+    });
+    const key = emails.data.email || issue.user.email || issue.user.login;
     if (!cache.data[key]) {
       cache.data[key] = initialiseDataRecord();
       cache.data[key].github.username = issue.user.name || issue.user.login;

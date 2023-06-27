@@ -44,8 +44,8 @@ export const aggregateData = async (cache: Cache) => {
     logHandler.log("info", "Fetching contribution data.");
     const githubPulls = await getGithubPulls(cache);
     const githubIssues = await getGithubIssues(cache);
-    parseGithubPulls(cache, githubPulls);
-    parseGithubIssues(cache, githubIssues);
+    await parseGithubPulls(cache, githubPulls);
+    await parseGithubIssues(cache, githubIssues);
     logHandler.log("info", "Finished fetching contribution data.");
     logHandler.log("info", "Preparing public data.");
     sanitiseData(cache);
