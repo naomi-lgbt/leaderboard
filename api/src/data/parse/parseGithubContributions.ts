@@ -16,24 +16,24 @@ export const parseGithubPulls = (
   pulls: RestEndpointMethodTypes["pulls"]["list"]["response"]["data"]
 ) => {
   for (const pull of pulls) {
-    if (!pull.user || !pull.user.email) {
+    if (!pull.user) {
       continue;
     }
-    if (!cache.data[pull.user.email]) {
-      cache.data[pull.user.email] = initialiseDataRecord();
-      cache.data[pull.user.email].github.username =
-        pull.user.name || pull.user.login;
-      cache.data[pull.user.email].github.url = pull.user.html_url;
+    const key = pull.user.email || pull.user.login;
+    if (!cache.data[key]) {
+      cache.data[key] = initialiseDataRecord();
+      cache.data[key].github.username = pull.user.name || pull.user.login;
+      cache.data[key].github.url = pull.user.html_url;
     }
     if (
       DateTime.fromISO(pull.created_at) > DateTime.now().minus({ days: 28 })
     ) {
-      cache.data[pull.user.email].github.month.pulls++;
+      cache.data[key].github.month.pulls++;
     }
     if (
       DateTime.fromISO(pull.created_at) > DateTime.now().minus({ days: 365 })
     ) {
-      cache.data[pull.user.email].github.year.pulls++;
+      cache.data[key].github.year.pulls++;
     }
   }
 };
@@ -50,24 +50,24 @@ export const parseGithubIssues = (
   issues: RestEndpointMethodTypes["issues"]["list"]["response"]["data"]
 ) => {
   for (const issue of issues) {
-    if (!issue.user || !issue.user.email) {
+    if (!issue.user) {
       continue;
     }
-    if (!cache.data[issue.user.email]) {
-      cache.data[issue.user.email] = initialiseDataRecord();
-      cache.data[issue.user.email].github.username =
-        issue.user.name || issue.user.login;
-      cache.data[issue.user.email].github.url = issue.user.html_url;
+    const key = issue.user.email || issue.user.login;
+    if (!cache.data[key]) {
+      cache.data[key] = initialiseDataRecord();
+      cache.data[key].github.username = issue.user.name || issue.user.login;
+      cache.data[key].github.url = issue.user.html_url;
     }
     if (
       DateTime.fromISO(issue.created_at) > DateTime.now().minus({ days: 28 })
     ) {
-      cache.data[issue.user.email].github.month.issues++;
+      cache.data[key].github.month.issues++;
     }
     if (
       DateTime.fromISO(issue.created_at) > DateTime.now().minus({ days: 365 })
     ) {
-      cache.data[issue.user.email].github.year.issues++;
+      cache.data[key].github.year.issues++;
     }
   }
 };

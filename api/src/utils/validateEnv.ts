@@ -1,11 +1,12 @@
 import { Cache } from "../interfaces/Cache";
 
 /**
- * Validates that the environment variables are present and sets them in the cache.
+ * Validates that the environment variables are present, and
+ * returns the expected environment object.
  *
- * @param {Cache} cache The global caching object.
+ * @returns {Cache["env"]} The environment object.
  */
-export const validateEnv = (cache: Cache) => {
+export const validateEnv = (): Cache["env"] => {
   if (!process.env.GITHUB_TOKEN) {
     throw new Error("Missing GITHUB_TOKEN in .env");
   }
@@ -24,7 +25,7 @@ export const validateEnv = (cache: Cache) => {
   if (!process.env.FORUM_USERNAME) {
     throw new Error("Missing FORUM_USERNAME in .env");
   }
-  cache.env = {
+  return {
     githubToken: process.env.GITHUB_TOKEN,
     ghostKey: process.env.GHOST_KEY,
     ghostAdminKey: process.env.GHOST_ADMIN_KEY,

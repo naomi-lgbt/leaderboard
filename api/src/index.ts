@@ -4,8 +4,7 @@ import { serve } from "./server/serve";
 import { validateEnv } from "./utils/validateEnv";
 
 (async () => {
-  const cache = { env: {}, data: {}, public: {} } as Cache;
-  validateEnv(cache);
+  const cache = { env: validateEnv(), data: {}, public: [] } as Cache;
 
   await aggregateData(cache);
 
