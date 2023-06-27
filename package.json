@@ -1,8 +1,7 @@
 {
-  "name": "nodejs-typescript-template",
+  "name": "leaderboard",
   "version": "0.0.0",
-  "description": "A template for my nodejs projects",
-  "main": "prod/index.js",
+  "description": "Prototyping a contributor leaderboard.",
   "scripts": {
     "build": "tsc",
     "lint": "eslint src test --max-warnings 0",
@@ -18,7 +17,6 @@
     "pnpm": "8.6.5"
   },
   "keywords": [
-    "template",
     "typescript",
     "eslint",
     "nodejs",
