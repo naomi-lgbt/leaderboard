@@ -7,6 +7,7 @@ import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HomeComponent } from './home/home.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProfileComponent } from './profile/profile.component';
     FourOhFourComponent,
     HomeComponent,
     LeaderboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
