@@ -67,6 +67,7 @@ export interface Cache {
   };
   public: {
     displayName: string;
+    avatarUrl: string;
     github: {
       year: {
         issues: number;
