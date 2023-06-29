@@ -3,6 +3,7 @@ import { generateGravatarUrl } from "../modules/generateGravatarUrl";
 import { errorHandler } from "../utils/errorHandler";
 import { logHandler } from "../utils/logHandler";
 
+import { MockPublicData } from "./__mocks__/MockPublicData";
 import {
   getGithubIssues,
   getGithubPulls,
@@ -46,6 +47,14 @@ export const sanitiseData = (cache: Cache) => {
  */
 export const aggregateData = async (cache: Cache) => {
   try {
+    if (process.env.NODE_ENV !== "production") {
+      logHandler.log(
+        "warn",
+        "Production mode is not enabled. To avoid API calls, mock data will be sent."
+      );
+      cache.public = MockPublicData;
+      return;
+    }
     logHandler.log("info", "Fetching contribution data.");
     const githubPulls = await getGithubPulls(cache);
     const githubIssues = await getGithubIssues(cache);
