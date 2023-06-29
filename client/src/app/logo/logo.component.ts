@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-logo',
-  templateUrl: './fcc_primary.svg',
-  styleUrls: ['./logo.component.css']
+  templateUrl: './logo.component.html',
+  styleUrls: ['./logo.component.css'],
 })
 export class LogoComponent {
-
+  @Input() width: number = 500;
 }

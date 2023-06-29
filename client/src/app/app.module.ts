@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LogoComponent } from './logo/logo.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LogoComponent } from './logo/logo.component';
     HomeComponent,
     LeaderboardComponent,
     ProfileComponent,
-    LogoComponent
+    LogoComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
