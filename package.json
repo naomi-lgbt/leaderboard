@@ -11,8 +11,9 @@
     "start": "pnpm run start:api && pnpm run start:client",
     "start:api": "cd api && pnpm run start",
     "start:client": "cd client && pnpm run dev",
-    "test": "pnpm run test:api",
-    "test:api": "cd api && pnpm run test"
+    "test": "pnpm run test:api && pnpm run test:client",
+    "test:api": "cd api && pnpm run test",
+    "test:client": "cd client && pnpm run test"
   },
   "repository": {
     "type": "git",
