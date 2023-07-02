@@ -30,8 +30,8 @@ importers:
         specifier: 16.3.1
         version: 16.3.1
       fastify:
-        specifier: 4.19.0
-        version: 4.19.0
+        specifier: 4.19.1
+        version: 4.19.1
       luxon:
         specifier: 3.3.0
         version: 3.3.0
@@ -1790,8 +1790,8 @@ packages:
     resolution: {integrity: sha512-cIusKBIt/R/oI6z/1nyfe2FvGKVTohVRfvkOhvx0nCEW+xf5NoCXjAHcWp93uOUBchzYcsvPlrapAdX1uW+YGg==}
     dev: false
 
-  /fastify@4.19.0:
-    resolution: {integrity: sha512-Fb7w46k3kum/V+OMiw2/LN1lo2xqhJqwTsv+LGie5n7YNdA9bmDUntXfcec9rG6VRDXIBfPf5xmFv2wooBdxzg==}
+  /fastify@4.19.1:
+    resolution: {integrity: sha512-99r7xae02BUWI1H8exJidkFJXi/SUZpO18YIJ6SSWIB1bb5CN659ga0iB85oLD+C4D9LeTOKplOJ1/YcFsK7oQ==}
     dependencies:
       '@fastify/ajv-compiler': 3.5.0
       '@fastify/error': 3.3.0
