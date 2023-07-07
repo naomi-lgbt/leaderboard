@@ -24,8 +24,8 @@ importers:
         specifier: 1.13.7
         version: 1.13.7
       '@tryghost/content-api':
-        specifier: 1.11.14
-        version: 1.11.14
+        specifier: 1.11.15
+        version: 1.11.15
       dotenv:
         specifier: 16.3.1
         version: 16.3.1
@@ -520,8 +520,8 @@ packages:
       - debug
     dev: false
 
-  /@tryghost/content-api@1.11.14:
-    resolution: {integrity: sha512-I3EvNTIyp5H/Ur2OClyvn0GL9JCHLAd9m8pPt0chN6CNV4fuWc89Q8EWlwWy87OVt4iFsBJg2qqMgrVgzeOEMQ==}
+  /@tryghost/content-api@1.11.15:
+    resolution: {integrity: sha512-xqq8OLY7sBXhDUAT5caaHmQICRo0WRtFW8M7hvm8ZbVHc+639hkEmIBuINxW3Zy+QjcXkXANYCqqYdAlBZPM3Q==}
     dependencies:
       axios: 1.4.0
     transitivePeerDependencies:
