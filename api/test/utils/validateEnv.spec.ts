@@ -3,6 +3,20 @@ import { assert } from "chai";
 import { validateEnv } from "../../src/utils/validateEnv";
 
 suite("validateEnv util", () => {
+  test("should return a mock environment when test mode is enabled", () => {
+    process.env.TEST_ENV = "true";
+    const result = validateEnv();
+    delete process.env.TEST_ENV;
+    assert.deepEqual(result, {
+      githubToken: "github",
+      ghostKey: "ghost",
+      ghostAdminKey: "ghost admin",
+      crowdinKey: "crowdin",
+      forumKey: "forum",
+      forumUsername: "forum username",
+    });
+  });
+
   test("should throw an error if GITHUB_TOKEN is not set", () => {
     assert.throw(() => validateEnv(), Error, "Missing GITHUB_TOKEN in .env");
   });

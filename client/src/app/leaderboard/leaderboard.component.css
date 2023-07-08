@@ -1,0 +1,77 @@
+h1,
+p {
+  text-align: center;
+}
+
+.divider {
+  background-color: var(--text-primary);
+  outline: none;
+  border: none;
+  margin: none;
+  width: 100%;
+  height: 3px;
+}
+
+.table {
+  width: 95vw;
+}
+
+.header,
+.bold {
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.bold {
+  font-size: 1.25rem;
+}
+
+.header,
+.row {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 50px 1fr 3fr 3fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.table-smol > .row,
+.table-smol > .header {
+  grid-template-columns: 50px 1fr 4fr;
+}
+
+.table-beeeg > .row,
+.table-beeeg > .header {
+  grid-template-columns: 50px 1fr 2fr 2fr 2fr;
+}
+
+.avatar {
+  width: 50px;
+}
+
+button {
+  padding: 0.5rem;
+  font-family: Roboto;
+  font-size: 1.25rem;
+  background: var(--background-primary);
+  color: var(--text-primary);
+  border: 2px solid var(--text-primary);
+}
+
+button:hover,
+button:disabled {
+  background: var(--text-primary);
+  color: var(--background-primary);
+}
+
+.btn-row {
+  margin: 0 auto;
+  width: 100vh;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.row:nth-of-type(even) {
+  background-color: var(--background-secondary);
+}

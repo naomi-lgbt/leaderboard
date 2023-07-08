@@ -1,7 +1,9 @@
 import { Cache } from "../interfaces/Cache";
+import { generateGravatarUrl } from "../modules/generateGravatarUrl";
 import { errorHandler } from "../utils/errorHandler";
 import { logHandler } from "../utils/logHandler";
 
+import { MockPublicData } from "./__mocks__/MockPublicData";
 import {
   getGithubIssues,
   getGithubPulls,
@@ -18,9 +20,9 @@ import {
  * @param {Cache} cache The global cache object.
  */
 export const sanitiseData = (cache: Cache) => {
-  const records = Object.values(cache.data);
+  const records = Object.entries(cache.data);
   let unknown = 1;
-  for (const record of records) {
+  for (const [email, record] of records) {
     const name =
       record.github.username ||
       record.forum.username ||
@@ -28,7 +30,11 @@ export const sanitiseData = (cache: Cache) => {
       record.news.username ||
       record.youtube.username ||
       `Unknown User ${unknown++}`;
-    cache.public.push({ ...record, displayName: name });
+    cache.public.push({
+      ...record,
+      displayName: name,
+      avatarUrl: generateGravatarUrl(email),
+    });
   }
 };
 
@@ -41,6 +47,14 @@ export const sanitiseData = (cache: Cache) => {
  */
 export const aggregateData = async (cache: Cache) => {
   try {
+    if (process.env.NODE_ENV !== "production") {
+      logHandler.log(
+        "warn",
+        "Production mode is not enabled. To avoid API calls, mock data will be sent."
+      );
+      cache.public = MockPublicData;
+      return;
+    }
     logHandler.log("info", "Fetching contribution data.");
     const githubPulls = await getGithubPulls(cache);
     const githubIssues = await getGithubIssues(cache);

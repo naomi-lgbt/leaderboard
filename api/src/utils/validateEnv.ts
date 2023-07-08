@@ -7,6 +7,16 @@ import { Cache } from "../interfaces/Cache";
  * @returns {Cache["env"]} The environment object.
  */
 export const validateEnv = (): Cache["env"] => {
+  if (process.env.TEST_ENV === "true") {
+    return {
+      githubToken: "github",
+      ghostKey: "ghost",
+      ghostAdminKey: "ghost admin",
+      crowdinKey: "crowdin",
+      forumKey: "forum",
+      forumUsername: "forum username",
+    };
+  }
   if (!process.env.GITHUB_TOKEN) {
     throw new Error("Missing GITHUB_TOKEN in .env");
   }

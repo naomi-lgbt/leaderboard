@@ -1,0 +1,15 @@
+nav {
+    position: sticky;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+svg {
+    align-self: left;
+}
+
+.links {
+    align-self: right;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --background-primary: #0a0a23;
+  --background-secondary: #1b1b32;
+  --background-highlight: #99c9ff;
+  --background-table-row: #3b3b4f;
+  --text-primary: #f5f6f7;
+  --text-secondary: #d0d0d5;
+  --text-highlight: #002ead;
+  --font-primary: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+}
+
+a {
+  color: var(--text-primary);
+}
+
+a:visited {
+  color: var(--text-secondary);
+}
