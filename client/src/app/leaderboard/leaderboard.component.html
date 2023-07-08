@@ -1,1 +1,97 @@
-<p>leaderboard works!</p>
+<h1>freeCodeCamp Leaderboard</h1>
+<p class="bold">Platform</p>
+<div class="btn-row">
+  <button (click)="setView('github')" [disabled]="view === 'github'">
+    GitHub
+  </button>
+  <button (click)="setView('forum')" [disabled]="view === 'forum'">
+    Forum
+  </button>
+  <button (click)="setView('crowdin')" [disabled]="view === 'crowdin'">
+    Crowdin
+  </button>
+  <button (click)="setView('news')" [disabled]="view === 'news'">News</button>
+  <button (click)="setView('youtube')" [disabled]="view === 'youtube'">
+    YouTube
+  </button>
+</div>
+<p class="bold">Timeframe</p>
+<div class="btn-row">
+  <button (click)="setScope('year')" [disabled]="scope === 'year'">
+    Yearly
+  </button>
+  <button (click)="setScope('month')" [disabled]="scope === 'month'">
+    Monthly
+  </button>
+</div>
+<hr class="divider" />
+<div class="flex"></div>
+<p *ngIf="!data">Loading...</p>
+<div class="table" *ngIf="data && view === 'github'">
+  <div class="header">
+    <span>Avatar</span>
+    <span>Name</span>
+    <span>Pull Requests Merged</span>
+    <span>Issues Closed with PR</span>
+  </div>
+  <div class="row" *ngFor="let datum of data">
+    <span><img class="avatar" src="{{ datum.avatarUrl }}" /></span>
+    <span>{{ datum.displayName }}</span>
+    <span>{{ datum.github[scope].pulls }}</span>
+    <span>{{ datum.github[scope].issues }}</span>
+  </div>
+</div>
+<div class="table" *ngIf="data && view === 'forum'">
+  <div class="header">
+    <span>Avatar</span>
+    <span>Name</span>
+    <span>Questions Solved</span>
+    <span>Posts Liked</span>
+  </div>
+  <div class="row" *ngFor="let datum of data">
+    <span><img class="avatar" src="{{ datum.avatarUrl }}" /></span>
+    <span>{{ datum.displayName }}</span>
+    <span>{{ datum.forum[scope].solutions }}</span>
+    <span>{{ datum.forum[scope].likes }}</span>
+  </div>
+</div>
+<div class="table-smol" *ngIf="data && view === 'crowdin'">
+  <div class="header">
+    <span>Avatar</span>
+    <span>Name</span>
+    <span>Strings Translated</span>
+  </div>
+  <div class="row" *ngFor="let datum of data">
+    <span><img class="avatar" src="{{ datum.avatarUrl }}" /></span>
+    <span>{{ datum.displayName }}</span>
+    <span>{{ datum.crowdin[scope].strings }}</span>
+  </div>
+</div>
+<div class="table-beeeg" *ngIf="data && view === 'news'">
+  <div class="header">
+    <span>Avatar</span>
+    <span>Name</span>
+    <span>Articles Written</span>
+    <span>Handbooks Published</span>
+    <span>Full Books Authored</span>
+  </div>
+  <div class="row" *ngFor="let datum of data">
+    <span><img class="avatar" src="{{ datum.avatarUrl }}" /></span>
+    <span>{{ datum.displayName }}</span>
+    <span>{{ datum.news[scope].articles }}</span>
+    <span>{{ datum.news[scope].handbooks }}</span>
+    <span>{{ datum.news[scope].fullbooks }}</span>
+  </div>
+</div>
+<div class="table-smol" *ngIf="data && view === 'youtube'">
+  <div class="header">
+    <span>Avatar</span>
+    <span>Name</span>
+    <span>Hours of Video Published</span>
+  </div>
+  <div class="row" *ngFor="let datum of data">
+    <span><img class="avatar" src="{{ datum.avatarUrl }}" /></span>
+    <span>{{ datum.displayName }}</span>
+    <span>{{ datum.youtube[scope].hours }}</span>
+  </div>
+</div>

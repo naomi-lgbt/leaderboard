@@ -8,9 +8,9 @@
     "lint": "pnpm run lint:api && pnpm run lint:client",
     "lint:api": "cd api && pnpm run lint",
     "lint:client": "cd client && pnpm run lint",
-    "start": "pnpm run start:api && pnpm run start:client",
+    "start": "npm-run-all -p start:api start:client",
     "start:api": "cd api && pnpm run start",
-    "start:client": "cd client && pnpm run dev",
+    "start:client": "cd client && pnpm run start",
     "test": "pnpm run test:api && pnpm run test:client",
     "test:api": "cd api && pnpm run test",
     "test:client": "cd client && pnpm run test"
@@ -21,7 +21,7 @@
   },
   "engines": {
     "node": "18.16.1",
-    "pnpm": "8.6.5"
+    "pnpm": "8.6.6"
   },
   "keywords": [
     "typescript",
@@ -38,5 +38,8 @@
   "devDependencies": {
     "@types/mocha": "10.0.1",
     "@types/node": "18.16.18"
+  },
+  "dependencies": {
+    "npm-run-all": "4.1.5"
   }
 }
