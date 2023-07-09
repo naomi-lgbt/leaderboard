@@ -156,8 +156,8 @@ importers:
         specifier: 16.1.0
         version: 16.1.0(@angular/compiler@16.1.0)(typescript@5.1.3)
       '@types/jasmine':
-        specifier: 4.3.0
-        version: 4.3.0
+        specifier: 4.3.5
+        version: 4.3.5
       jasmine-core:
         specifier: 4.6.0
         version: 4.6.0
@@ -2837,8 +2837,8 @@ packages:
       '@types/node': 18.16.19
     dev: true
 
-  /@types/jasmine@4.3.0:
-    resolution: {integrity: sha512-u1jWakf8CWvLfSEZyxmzkgBzOEvXH/szpT0e6G8BTkx5Eu0BhDn7sbc5dz0JBN/6Wwm9rBe+JAsk9tJRyH9ZkA==}
+  /@types/jasmine@4.3.5:
+    resolution: {integrity: sha512-9YHUdvuNDDRJYXZwHqSsO72Ok0vmqoJbNn73ttyITQp/VA60SarnZ+MPLD37rJAhVoKp+9BWOvJP5tHIRfZylQ==}
     dev: true
 
   /@types/json-schema@7.0.12:
