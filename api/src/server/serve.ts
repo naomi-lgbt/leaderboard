@@ -13,7 +13,7 @@ export const serve = async (cache: Cache) => {
   logHandler.log("info", "Booting server...");
   const server = Fastify({ logger: true });
 
-  server.register(cors, {
+  await server.register(cors, {
     origin: (origin, cb) => {
       if (!origin) {
         cb(new Error("No origin"), false);

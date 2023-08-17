@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGO_URL")
+}
+
+model users {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  email       String
+  displayName String @default("Camper")
+  avatarUrl   String @default("")
+  crowdinId   String @default("")
+  forumId     String @default("")
+  newsEmail   String @default("")
+  githubEmail String @default("")
+
+  @@unique([email], map: "email1")
+  @@unique([crowdinId], map: "crowdinId1")
+  @@unique([forumId], map: "forumId1")
+  @@unique([newsEmail], map: "newsEmail1")
+  @@unique([githubEmail], map: "githubEmail1")
+}
