@@ -20,8 +20,8 @@
     "url": "git+ssh://git@github.com:naomi-lgbt/leaderboard.git"
   },
   "engines": {
-    "node": "18.17.1",
-    "pnpm": "8.6.12"
+    "node": "18",
+    "pnpm": "8"
   },
   "keywords": [
     "typescript",
