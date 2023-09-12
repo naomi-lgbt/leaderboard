@@ -74,8 +74,8 @@ importers:
         specifier: 18.17.15
         version: 18.17.15
       '@types/tryghost__content-api':
-        specifier: 1.3.11
-        version: 1.3.11
+        specifier: 1.3.12
+        version: 1.3.12
       chai:
         specifier: 4.3.8
         version: 4.3.8
@@ -2918,8 +2918,8 @@ packages:
     resolution: {integrity: sha512-txGIh+0eDFzKGC25zORnswy+br1Ha7hj5cMVwKIU7+s0U2AxxJru/jZSMU6OC9MJWP6+pc/hc6ZjyZShpsyY2g==}
     dev: false
 
-  /@types/tryghost__content-api@1.3.11:
-    resolution: {integrity: sha512-Gv8zoIVvIALZKjyZWa1dZT1WUtZgqLkpdH+tK/YlfL1JTEn+oeAEvj5AX/jjX2Scv7oaEc/SlZry4Km2xp+ZEw==}
+  /@types/tryghost__content-api@1.3.12:
+    resolution: {integrity: sha512-mLmDCNJIbgKFwOIHHyZGBpAO7rdYt3Yl5AhU8zw2zpWFp9RNPplT0i/QgiThi/yRRkV2U81auWgAm2OnlJNzSQ==}
     dev: true
 
   /@types/ws@8.5.5:
