@@ -59,8 +59,8 @@ importers:
         specifier: 1.0.1
         version: 1.0.1(typescript@5.2.2)
       '@types/chai':
-        specifier: 4.3.7
-        version: 4.3.7
+        specifier: 4.3.8
+        version: 4.3.8
       '@types/luxon':
         specifier: 3.3.2
         version: 3.3.2
@@ -2768,8 +2768,8 @@ packages:
       '@types/node': 18.18.4
     dev: true
 
-  /@types/chai@4.3.7:
-    resolution: {integrity: sha512-/k+vesl92vMvMygmQrFe9Aimxi6oQXFUX9mA5HanTrKUSAMoLauSi6PNFOdRw0oeqilaW600GNx2vSaT2f8aIQ==}
+  /@types/chai@4.3.8:
+    resolution: {integrity: sha512-yW/qTM4mRBBcsA9Xw9FbcImYtFPY7sgr+G/O5RDYVmxiy9a+pE5FyoFUi8JYCZY5nicj8atrr1pcfPiYpeNGOA==}
     dev: true
 
   /@types/connect-history-api-fallback@1.5.0:
