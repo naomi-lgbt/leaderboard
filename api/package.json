@@ -25,7 +25,7 @@
     "@tryghost/admin-api": "1.13.8",
     "@tryghost/content-api": "1.11.17",
     "dotenv": "16.3.1",
-    "fastify": "4.24.0",
+    "fastify": "4.24.1",
     "luxon": "3.4.3",
     "md5": "2.3.0",
     "winston": "3.11.0"
