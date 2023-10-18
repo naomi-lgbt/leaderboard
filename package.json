@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/naomi-lgbt/leaderboard#readme",
   "devDependencies": {
-    "@types/mocha": "10.0.2",
+    "@types/mocha": "10.0.3",
     "@types/node": "18.18.5"
   },
   "dependencies": {
