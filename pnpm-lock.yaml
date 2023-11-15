@@ -28,8 +28,8 @@ importers:
         specifier: 19.0.13
         version: 19.0.13
       '@tryghost/admin-api':
-        specifier: 1.13.10
-        version: 1.13.10
+        specifier: 1.13.11
+        version: 1.13.11
       '@tryghost/content-api':
         specifier: 1.11.19
         version: 1.11.19
@@ -2724,8 +2724,8 @@ packages:
     engines: {node: '>= 10'}
     dev: true
 
-  /@tryghost/admin-api@1.13.10:
-    resolution: {integrity: sha512-1egCY+QrjV6oNIYFdNFTyO+r4YLwMzq5ScunRghaYdy6AbiJRkKwCbnOtl2H2NLE4r2dTfMEgmhOYn72KspPlw==}
+  /@tryghost/admin-api@1.13.11:
+    resolution: {integrity: sha512-8orRjijkK7tOZ6lx0KZzl/L45RfUUwwCK8TASgLUIGLysLEf/nOQoxKp5jOAlGfUI7rEu7ucVK1KKNles2+dbA==}
     dependencies:
       axios: 1.4.0
       form-data: 4.0.0
