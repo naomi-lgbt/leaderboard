@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/naomi-lgbt/leaderboard#readme",
   "dependencies": {
-    "@fastify/cors": "8.4.1",
+    "@fastify/cors": "8.4.2",
     "@octokit/rest": "19.0.13",
     "@tryghost/admin-api": "1.13.11",
     "@tryghost/content-api": "1.11.20",
