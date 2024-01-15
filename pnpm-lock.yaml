@@ -62,8 +62,8 @@ importers:
         specifier: 4.3.11
         version: 4.3.11
       '@types/luxon':
-        specifier: 3.4.0
-        version: 3.4.0
+        specifier: 3.4.1
+        version: 3.4.1
       '@types/md5':
         specifier: 2.3.5
         version: 2.3.5
@@ -2890,8 +2890,8 @@ packages:
     requiresBuild: true
     dev: true
 
-  /@types/luxon@3.4.0:
-    resolution: {integrity: sha512-PEVoA4MOfSsFNaPrZjIUGUZujBDxnO/tj2A2N9KfzlR+pNgpBdDuk0TmRvSMAVUP5q4q8IkMEZ8UOp3MIr+QgA==}
+  /@types/luxon@3.4.1:
+    resolution: {integrity: sha512-m1KQEZZCITtheRhMVq5jDvAl0HwFhunLs7x6tpFFvUTJpKfmewS/Ymg+YA97/s8w1I1nC4pJyi0aAnn+vf3yew==}
     dev: true
 
   /@types/md5@2.3.5:
