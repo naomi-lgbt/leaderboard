@@ -24,7 +24,7 @@
     "@octokit/rest": "19.0.13",
     "@tryghost/admin-api": "1.13.11",
     "@tryghost/content-api": "1.11.20",
-    "dotenv": "16.4.0",
+    "dotenv": "16.4.1",
     "fastify": "4.25.2",
     "luxon": "3.4.4",
     "md5": "2.3.0",
