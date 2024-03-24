@@ -28,7 +28,7 @@
     "fastify": "4.26.2",
     "luxon": "3.4.4",
     "md5": "2.3.0",
-    "winston": "3.12.0"
+    "winston": "3.13.0"
   },
   "devDependencies": {
     "@nhcarrigan/eslint-config": "1.1.3",
